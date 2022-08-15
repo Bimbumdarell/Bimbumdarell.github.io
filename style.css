@@ -6,7 +6,6 @@
     color: #fff;
     background: #02112e;
 }
-
 html{
     font-size: 10px;
     font-family: 'Poppins', 'Times New Roman', Times, serif ;
@@ -44,7 +43,6 @@ p {
     font-weight: 200;
     letter-spacing: 0.05rem;
 }
-
 .container{
     min-height: 100vh;
     width: 100%;
@@ -62,11 +60,7 @@ p {
     letter-spacing: 0.2rem;
     text-align: center;
 }
-
-
-
 #presentation{
-    /* background:; */
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -103,7 +97,6 @@ p {
     margin-top: 20px;
     transition: .5s ease;
     transition-property: background-color, color;
-
 }
 #presentation .cta:hover{
     color: white;
@@ -149,12 +142,12 @@ p {
     opacity: 0.5;
     z-index: -1;
 }
-
 @keyframes text_reveal{
     100%{
         color: white;
     }
 }
+
 @keyframes text_reveal_name{
     100%{
         color: #FEB139;
@@ -172,8 +165,6 @@ p {
         left:100%
     }
 }
-
-/* Media Query */
 .intro{
     position:relative;
     height:55vh;
@@ -192,7 +183,6 @@ p {
 }
 .intro p{
     color: #D61C4E;
-    /* padding: 0 130px 0 30px; */
     width:50%;
     height: auto;
     white-space: break-word;
@@ -222,7 +212,6 @@ p {
         opacity:1;
     }
    }
-   
    .card:hover {
     box-shadow: 20px 20px 200px 4px rgba(0, 0, 0, 0.623);
     background-color: #02112e;
@@ -252,7 +241,6 @@ p {
     align-items: center;
     transition: all 0.5s;
    }
-   
    .card:hover .img {
     width: 100%;
     height: 70%;
@@ -261,7 +249,6 @@ p {
     background-color: #f0f0f0;
     z-index: 99999;
    }
-   
    .card h2 {
     padding: 15px 10px;
     font-size: 25px;
@@ -275,11 +262,9 @@ p {
     background:none;
     color: black;
    }
-   
    .card span {
     font-size: 18px;
    }
-   
    .card:hover h2 {
     display:none;
     background:#02112e;
@@ -287,18 +272,15 @@ p {
     position: absolute;
     transition: all 0.5s;
    }
-   
    .card>p {
     opacity: 1;
     width: auto;
     transition: all 0.75s;
    }
-   
    .card:hover>p {
     position: absolute;
     bottom: 15px;
     left: 90px;
-    /* background: #02112e; */
     opacity: 1;
     transition: all 0.1s;
     width: auto;
@@ -315,7 +297,6 @@ p {
     margin:auto;
     padding: .4em;
   }
-  
   .card1 p {
     height: 100%;
     -webkit-box-flex: 1;
@@ -340,13 +321,11 @@ p {
         -ms-flex-align: center;
             align-items: center;
   }
-  
   .card1 p:hover {
     -webkit-box-flex: 4;
         -ms-flex: 4;
             flex: 4;
   }
-  
   .card1 p span {
     min-width: 14em;
     text-align: center;
@@ -359,7 +338,6 @@ p {
     color: #ff568e;
     letter-spacing: .1em;
   }
-  
   .card1 p:hover span {
     -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
@@ -411,23 +389,104 @@ p {
     text-align: center;
     font-size: 35px;
     padding:50px;
-
-  }
-  main button{
-  display: inline-block;
-  padding: 10px 30px;
-  color: #ff0063;
-  background-color: transparent;
-  border: 2px solid #ff0063;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  transform: translateX(35vw);
-  margin-top: 20px;
-  transition: .5s ease;
-  transition-property: background-color, color;
-
-}
+  }  
+main button { 
+    padding: 0.5em 1em;
+    height: 50px;
+    outline: none;
+    border: 1px solid #D61C4E;
+    color: #D61C4E;
+    text-transform:none;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transform: translateX(42vw);
+   }
+   
+  main button:hover {
+    box-shadow: 0 0 10px #D61C4E, 0 0 25px #001eff, 0 0 50px #D61C4E;
+    transition-delay: 0.6s;
+   }
+   
+   main button span {
+    position: absolute;
+   }
+   
+   main button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+   }
+   
+   main button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+   }
+   
+   main button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+   }
+   
+   main button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+   }
+   
+   main button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+   }
+   
+   main button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+   }
+   
+  main button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+   }
+   
+  main button:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+   }
+   
+  main button:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+   }
+   
+   main button:active span:nth-child(1) 
+   span:nth-child(2) 
+   span:nth-child(2) 
+   span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+   }
+   
 hr{
     height:0.1px;
     opacity:0.4;
@@ -436,18 +495,7 @@ main a{
     font-size: 3em;
     background: none;
 }
-main button:hover{
-  color: white;
-  font-weight: 500;
-  background-color: #ff0063;
-}
-main button a{
-    background:none;
-    color:#ff0063;
-}
-main button:hover a{
-    color:white;
-}
+
 aside h1{
     padding:40px;
     color:white;
@@ -514,7 +562,6 @@ main button a{
     background-repeat: no-repeat;
     background-size: 100%  100%;
     position: relative;
-
 }
 .box2{
     background-position: center;
@@ -530,9 +577,14 @@ main button a{
 .box4{
     background-position: inherit;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .box5{
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%  100%;
+}
+footer{
+    background-color: #02112e;
+    height: 70vh;
 }
