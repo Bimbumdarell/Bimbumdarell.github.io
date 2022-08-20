@@ -338,7 +338,7 @@ p {
     position:relative;
     /* height:55vh; */
     width:100%;
-    padding:50px 5px;
+    padding:50px;
     /* border:1px solid yellow; */
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, auto));
@@ -350,7 +350,7 @@ p {
 @media screen and (min-width: 800px){
     .intro{
         grid-template-columns: repeat(auto-fill, minmax(700px, auto));
-        column-gap: 400px;
+        column-gap: 200px;
     }
 }
 .grid-item1{
@@ -375,14 +375,14 @@ p {
     width:100%;
     height: auto;
     white-space: break-word;
-    /* margin-top: 0px; */
+    margin-top: 0px;
     font-size: 2rem;
     /* border:1px solid yellow; */
     padding:0;
     padding-bottom: 60px;
 }
 .card {
-    width: 360px;
+    width: 280px;
     position: relative;
     height:400px;
     /* position: absolute; */
@@ -390,11 +390,16 @@ p {
     /* bottom:110px; */
     opacity:1;
     /* right:60px; */
-    box-shadow: 20px 20px 200px 4px rgba(0, 0, 0, 0.623);
+    /* box-shadow: 20px 20px 200px 4px rgba(0, 0, 0, 0.623); */
     /* z-index: 2; */
     border-radius: 10px;
     text-align: center;
-    transition: all 3s ease-out;
+    /* transition: all 3s ease-out; */
+}
+@media screen and (min-width: 800px){
+  .card{
+    width:400px;
+  }
 }
 /* .active{
     animation: slide 3s linear 1 forwards ;
@@ -405,7 +410,7 @@ p {
     } */
    /* } */
    .card:hover {
-    box-shadow: 20px 20px 200px 4px rgba(0, 0, 0, 0.623);
+    /* box-shadow: 20px 20px 200px 4px rgba(0, 0, 0, 0.623); */
     background-color: #02112e;
    }
    .card .blob{
@@ -487,7 +492,8 @@ p {
 @media screen and (min-width: 800px){
     .offer-section{
         padding: 0 100px;
-        column-gap: 250px;
+        grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+        column-gap: 20px;
     }
 }
 a.box {
@@ -496,13 +502,19 @@ a.box {
 	/* background-color: #2f9b9b; */
     background-color: #ff0063;
 	display: block;
-	width: 390px;
+	width: 240px;
 	height: 450px;
     border-radius: 40px;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
 	font-family: 'Ubuntu', sans-serif;
+}
+@media screen and (min-width: 800px){
+  a.box{
+    /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
+    width:400px
+  }
 }
 code{
     color:#02112e;
@@ -593,9 +605,15 @@ a:hover .link {
     margin-bottom: 60px;
     display:grid;
     /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
-    gap:5em;
+    grid-template-columns: repeat(auto-fill, minmax(240px, auto));
+    gap:8em;
     /* grid-template-rows: 1fr 1fr 1fr; */
+  }
+
+  @media screen and (min-width: 800px){
+    .project{
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    }
   }
   /* .box5{
     grid-column-start: 1;
@@ -605,8 +623,15 @@ a:hover .link {
     grid-row-start: 3;
     grid-row-end: 4;     */
   .box1,.box2,.box3,.box4,.box5{
+    margin-left: 1px;
     height:400px;
-    width:350px;
+    width:240px;
+  }
+  @media screen and (min-width: 800px){
+    .box1,.box2,.box3,.box4,.box5{
+  width:500px;
+  margin:auto;
+    }
   }
   main h2{
     color:white;
