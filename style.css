@@ -338,10 +338,10 @@ p {
     position:relative;
     /* height:55vh; */
     width:100%;
-    padding:50px;
+    padding:50px 5px;
     /* border:1px solid yellow; */
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(240px, auto));
     background: none;
     
     /* gap:80vh; */
@@ -375,7 +375,7 @@ p {
     width:100%;
     height: auto;
     white-space: break-word;
-    margin-top: 0px;
+    /* margin-top: 0px; */
     font-size: 2rem;
     /* border:1px solid yellow; */
     padding:0;
@@ -482,7 +482,7 @@ p {
 .offer-section{
     display:grid;
     /* padding:30px; */ 
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 @media screen and (min-width: 800px){
     .offer-section{
