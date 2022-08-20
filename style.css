@@ -12,6 +12,12 @@
 body{
     overflow: hidden;
 }
+::-webkit-scrollbar{
+  background:#02112e;
+}
+::-webkit-scrollbar-thumb{
+  background:#ff0063;
+}
 html{
     font-size: 10px;
     /* font-family: 'Poppins', 'Times New Roman', Times, serif ; */
@@ -487,14 +493,20 @@ p {
 .offer-section{
     display:grid;
     /* padding:30px; */ 
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
 }
 @media screen and (min-width: 800px){
     .offer-section{
         padding: 0 100px;
-        grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
         column-gap: 20px;
     }
+}
+.what-i-offer-header{
+  text-align:center;
+    font-size:6em;
+    padding:1.5em;
+    /* white-space: nowrap; */
 }
 a.box {
 	color: #fff;
@@ -502,7 +514,7 @@ a.box {
 	/* background-color: #2f9b9b; */
     background-color: #ff0063;
 	display: block;
-	width: 240px;
+	width: 340px;
 	height: 450px;
     border-radius: 40px;
 	overflow: hidden;
@@ -605,7 +617,7 @@ a:hover .link {
     margin-bottom: 60px;
     display:grid;
     /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: repeat(auto-fill, minmax(290px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(320px, auto));
     gap:8em;
     /* grid-template-rows: 1fr 1fr 1fr; */
   }
@@ -625,7 +637,7 @@ a:hover .link {
   .box1,.box2,.box3,.box4,.box5{
     margin-left: 1px;
     height:400px;
-    width:240px;
+    width:320px;
   }
   @media screen and (min-width: 800px){
     .box1,.box2,.box3,.box4,.box5{
