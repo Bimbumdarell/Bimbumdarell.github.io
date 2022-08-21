@@ -768,7 +768,7 @@ aside button{
   }
 aside input::placeholder{
     font-size: 30px;
-    color:white;
+    color:#000;
 }
 aside button{
     width:200px;
