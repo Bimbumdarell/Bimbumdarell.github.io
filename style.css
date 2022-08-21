@@ -89,6 +89,7 @@ html{
       -ms-transform: rotate(360deg);
       transform: rotate(360deg);
       opacity: 0;
+      z-index: -999;
   }
 }
 @keyframes spin {
@@ -1019,6 +1020,7 @@ aside button{
     justify-content: center;
     /* border:1px solid yellow; */
     width:100%;
+    color:black;
     padding:0 50px;
   }
   @media screen and (min-width: 800px){
@@ -1040,7 +1042,7 @@ aside button{
     height:50px;
     resize: both;
     font-size: 30px;
-    color:white;
+    color:black;
   }
 aside input::placeholder{
     font-size: 30px;
