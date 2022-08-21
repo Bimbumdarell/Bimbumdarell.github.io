@@ -299,6 +299,7 @@ html{
 .nav-links li a{
     text-decoration: none;
     margin: 30px;
+    font-size: 25px;
 }
 .nav-links li a:hover {
     color: #61DAFB;
@@ -457,6 +458,7 @@ img{
     width: 100%;
     object-fit: cover;
     background-image: url();
+
 }
 .card ul{
     list-style-type: none;
@@ -469,6 +471,16 @@ img{
 .card:hover ul{
     display: flex;
 }
+@media screen and (max-width: 600px){
+  .card ul{
+    display:flex;
+    background: #f0f0f0;
+  }
+  .card:hover ul{
+    display:flex;
+  }
+}
+
 .card ul li img{
     height: 20px;
     width: 20px;
