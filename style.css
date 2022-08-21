@@ -28,154 +28,85 @@ html{
     position: relative;
     background: #02112e;
 }
-.preloader{
-  position:absolute;
-  /* top:0;
-  bottom:0; */
-  height:100vh;
-  width:100%;
-  z-index: 1000000;
-  /* height:40px; */
-  background-color:#02112e;
-  /* border:1px solid green; */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#loader {
   display: block;
-  animation: preloader 3s linear 1 forwards;
-}
-@keyframes preloader {
-  100%{
-    /* background:white; */
-    z-index: -100000;
-  }
-}
-
-/* .webport{
-  display:none;
-} */
-.spinner {
-  position: absolute;
-  width: 60px;
-  z-index: 30;
-  height: 60px;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 50%;
-  margin-left: -75px;
-}
- 
- .spinner span {
-  position: absolute;
+  position: relative;
+  left: 50%;
   top: 50%;
-  left: var(--left);
-  width: 35px;
-  height: 7px;
-  background: #ffff;
-  -webkit-animation: dominos 1s ease infinite;
-          animation: dominos 1s ease infinite;
-  -webkit-box-shadow: 2px 2px 3px 0px black;
-          box-shadow: 2px 2px 3px 0px black;
-          /* animation: preloader; */
-        }
-        /* @keyframes preloader {
-         100%{
-           /* background:white; */
-           /* z-index: -100000; */
-         /* } */
-       /* } */
- .spinner span:nth-child(1) {
-  --left: 80px;
-  -webkit-animation-delay: 0.125s;
-          animation-delay: 0.125s;
- }
- 
- .spinner span:nth-child(2) {
-  --left: 70px;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
- }
- 
- .spinner span:nth-child(3) {
-  left: 60px;
-  -webkit-animation-delay: 0.425s;
-          animation-delay: 0.425s;
- }
- 
- .spinner span:nth-child(4) {
-  -webkit-animation-delay: 0.54s;
-          animation-delay: 0.54s;
-  left: 50px;
- }
- 
- .spinner span:nth-child(5) {
-  -webkit-animation-delay: 0.665s;
-          animation-delay: 0.665s;
-  left: 40px;
- }
- 
- .spinner span:nth-child(6) {
-  -webkit-animation-delay: 0.79s;
-          animation-delay: 0.79s;
-  left: 30px;
- }
- 
- .spinner span:nth-child(7) {
-  -webkit-animation-delay: 0.915s;
-          animation-delay: 0.915s;
-  left: 20px;
- }
- 
- .spinner span:nth-child(8) {
-  left: 10px;
- }
- 
- @-webkit-keyframes dominos {
-  50% {
-   opacity: 0.7;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9370DB;
+  -webkit-animation: spin 3s linear 1 forwards;
+  animation: spin 3s linear 1 forwards;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #BA55D3;
+  -webkit-animation: spin 4s linear 1 forwards;
+  animation: spin 4s linear 1 forwards;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FF00FF;
+  -webkit-animation: spin 2.5s linear 1 forwards;
+  animation: spin 2.5s linear 1 forwards;
+}
+@-webkit-keyframes spin {
+  0%   {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      /* display:none;
+       */
+       opacity: 0;
+      transform: rotate(0deg);
   }
- 
-  75% {
-   -webkit-transform: rotate(90deg);
-   transform: rotate(90deg);
-  }
- 
-  80% {
-   opacity: 1;
-  }
- }
- 
- @keyframes dominos {
-  50% {
-   opacity: 0.7;
-  }
- 
-  75% {
-   -webkit-transform: rotate(90deg);
-   transform: rotate(90deg);
-  }
- 
-  80% {
-   opacity: 1;
-  }
- }
- .spinner{  animation: preloader;
- }
- @keyframes preloader {
-  100%{
-    /* background:white; */
-    z-index: -100000;
-    opacity: 0;
+  100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+      opacity: 0;
   }
 }
-.page-header {
+@keyframes spin {
+  0%   {
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      transform: rotate(360deg);
+      opacity:0;
+      /* z-index: -20; */
+  }
+}
+/* .page-header {
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -196,7 +127,7 @@ html{
         -ms-flex-align: center;
             align-items: center;
             /* border:1px solid red; */
-    margin: 0 auto;
+    /* margin: 0 auto; 
     width: 80%;
   }
   .page-header > .header-content .logo {
@@ -236,7 +167,7 @@ html{
   }
   .page-header > .header-content > nav {
     position: absolute;
-    /* border:1px solid green; */
+    /* border:1px solid green; 
     top: 0;
     right: -100%;
     -webkit-transition: right 0.3s ease;
@@ -331,7 +262,193 @@ html{
       justify-content: flex-end;
       padding:0;
     }
-  }
+  } */
+  nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    /* height:6rem; */
+    text-align: center;
+    /* border-radius: 100%; */
+}
+.logo img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: flex-end;
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    text-decoration: none;
+    margin: 30px;
+}
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button{
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    color: #131418;
+    background-color: #61DAFB;
+    border: 1.5px solid #61DAFB;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.join-button:hover {
+    color: #f2f5f7;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        /* border:1px solid red; */
+        width: 100%;
+        padding:0;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links ul{
+      /* border:2px solid yellow; */
+      padding:0;
+    }
+    .nav-links li{
+        opacity: 0;
+      margin:60px;
+    }
+    .nav-links li a{
+      font-size: 20px;
+    }
+    .nav-links li:nth-child(1){
+        margin-top: -500px;
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
 a{
     text-decoration: none;
 }
@@ -393,21 +510,21 @@ p {
     position: relative;
     color: transparent;
     animation: text_reveal .5s ease forwards;
-    animation-delay: 1.5s;
+    animation-delay: 4.1s;
 }
 @media screen and (min-width: 800px){
    #presentation h1{
      font-size: 8rem;
 }}
 #presentation h1:nth-child(1){
-    animation-delay: .8s;
+    animation-delay: 4.9s;
 }
 #presentation h1:nth-child(2){
-    animation-delay: 1.8s;
+    animation-delay: 5.9s;
 }
 #presentation h1:nth-child(3){
     animation: text_reveal_name .5s ease forwards;
-    animation-delay: 2.8s;
+    animation-delay: 6.9s;
 }
 #presentation .cta{
     display: inline-block;
@@ -429,7 +546,7 @@ p {
 }
 .cta{
     opacity:0;
-    animation:fade-in 4s linear 3s 1 forwards;
+    animation:fade-in 4s linear 8s 1 forwards;
 }
 @keyframes fade-in{
     100%{
@@ -443,17 +560,17 @@ p {
     height: 100%;
     width: 0%;
     animation: text_reveal_box 1s ease;
-    animation-delay: 4s;
+    animation-delay: 4.1s;
     background-color: #FEB139;
 }
 #presentation h1:nth-child(1) span{
-    animation-delay: .5s;
+    animation-delay: 4.5s;
 }
 #presentation h1:nth-child(2) span{
-    animation-delay: 1.5s;
+    animation-delay: 5.5s;
 }
 #presentation h1:nth-child(3) span{
-    animation-delay: 2.5s;
+    animation-delay: 6.5s;
 }
 #presentation::after{
     content: '';
