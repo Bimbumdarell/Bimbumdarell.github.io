@@ -6,6 +6,18 @@
     color: #fff;
     background: #02112e;
 }
+nav{
+    height: 10vh;
+    padding: 0%;
+    background-color: #FEB139;
+}
+nav ul{
+    list-style-type: none;
+    text-decoration: none;
+    justify-content: space-between;
+    display: flex;
+    float: inline-end;
+}
 html{
     font-size: 10px;
     font-family: 'Poppins', 'Times New Roman', Times, serif ;
