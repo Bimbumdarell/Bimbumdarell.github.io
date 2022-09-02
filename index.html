@@ -6,17 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>WELCOME</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <script src="doc.js" defer></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li>HOME</li>
-      <li>WORKS</li>
-      <li>CONTACT US</li>
-      <li>REVIEWS</li>
-    </ul>
-  </nav>
+  <!-- <div id="preloader">
+    <div id="loader"></div>
+  </div> -->
+  <div class="web-port">
+   
+    <nav>
+        <div class="logo">
+            <img src="./bimpe-profile-pic" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#offering">Services</a></li>
+<!--             <li><a href="#">Products</a></li> -->
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+<!--             <li><button class="login-button" href="#">Login</button></li>
+            <li><button class="join-button" href="#">Join</button></li> -->
+        </ul>
+    </nav>
+    <!-- <script src="nav.js"></script> -->
+
     <section id="presentation">
         <div class="presentation container">
             <div>
@@ -28,11 +47,13 @@
         </div>
     </section>
 <div class="intro" id="about">
+  <div class="grid-item1">
     <h1>ABOUT ME </h1>
     <p>
-      My name is Aminu Adebimpe Florence, I am a Front End Developer based in Nigeria. I describe myself as a passionate developer. Recently, I started a web development class at OMEGA computers in conjunction with the Federal Republic of Nigeria and graduated. I am a student in my finals in the University of Ilorin, Nigeria. I am always open to corrections and willing to learn. I have worked hard to learn and now I am ready to apply my knowledge into practice. While I don't have any real-life work experience, I have some exposure to the business environment.
+      My name is Aminu Adebimpe Florence, I am a Front End Developer based in Nigeria. <span class="tile" style="color:#ff0063;"> I describe myself as a passionate developer. Recently, I started a web development class at OMEGA computers in conjunction with the Federal Republic of Nigeria and graduated. I am a student in my finals in the University of Ilorin, Nigeria. I am always open to corrections and willing to learn. I have worked hard to learn and now I am ready to apply my knowledge into practice. While I don't have any real-life work experience, I have some exposure to the business environment.</span>
     </p>
-    <div class="card active">
+    </div>
+    <div class="card">
         <div class="blob"></div>
           <span class="img"></span>
           <h2>ADEBIMPE<br><span>AMINU</span></h2>
@@ -44,39 +65,71 @@
           </ul>
         </div>
     </div>
-    <span><h1 class="what-i-offer">WHAT I OFFER</h1></span>
-    <div class="card1">
-      <p>
-        <span>RESPONSIVE WEB DESIGN.</span>
-      <b>Responsive web design (RWD) is a web development approach that creates dynamic changes to the appearance of a website, depending on the screen size and orientation of the device being used to view it. RWD is one approach to the problem of designing for the multitude of devices available to customers, ranging from tiny phones to huge desktop monitors.</b>
-    </p>
-      <p>
-        <span>WEB TRAFFIC AND SALES.</span>
-        <b>
+    <h1 class="what-i-offer-header">What I Offer</h1>
+    <div class="offer-section" id="offering">
+      
+      <a class="box tile"> 
+              <div class="content">
+            <h2>
+              RESPONSIVE WEB DESIGN.
+            </h2>
+            <img src="./app-development.png" alt="">
+            <p class="description">
+              <!-- <span></span> -->
+              <code>Responsive web design (RWD) is a web development approach that creates dynamic changes to the appearance of a website, depending on the screen size and orientation of the device being used to view it. RWD is one approach to the problem of designing for the multitude of devices available to customers, ranging from tiny phones to huge desktop monitors.</code>
+              <span class="link">Click to read more >> </span>
+            </p>
+            
+            </div>
+        </a>
+      <a class="box tile"> 
+              <div class="content">
+            <h2>
+              WEB TRAFFIC AND SALES.
+            </h2>
+            <img src="./development.png" alt="">
+            <p class="description">
+              <!-- <span></span> -->
+        <code>
           Website traffic refers to the volume of users visiting a website. How many people visit a website will depend on the website’s purpose, the visitors’ own goals, and the way in which they discovered the site. A good website will definitely increase the conversation level of customers as more people are going to want to communicate more, especially when the website is properly designed.  
-        </b>
-      </p>
-      <p>
-        <span>FRONTEND WEB DEVELOPMENT</span>
-        <b>
-          Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.
-        </b>
-      </p>
-  </div>
+        </code>
+              <span class="link">Click to read more >> </span>
+            </p>
+            
+            </div>
+        </a>
+      <a class="box tile"> 
+              <div class="content">
+            <h2>
+              FRONTEND WEB DEVELOPMENT
+            </h2>
+            <img src="./software-development.png" alt="">
+            <p class="description">
+              <!-- <span>/span> -->
+              <code>
+                Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly.
+              </code>
+              <span class="link">Click to read more >> </span>
+            </p>
+            
+            </div>
+        </a>
+      </div>
   <br>
    <br>
    <br>
+   <!-- <div class="dfun"style="height:300px; width:300px;"><img src="./software-development.png" alt="" height="300px" width="300px"></div> -->
   <br>
   <br>
   <hr>
   <main>
-    <h1>SOME OF MY PROJECTS</h1>
+    <h1 id="project">SOME OF MY PROJECTS</h1>
     <div class="project">
-      <div class="box1"><img src="fb-mockup.png" alt=""> <a href="#">Facebook Mockup</a></div>
-      <div class="box2"><img src="dropbox.png" alt=""> <a href="#">Dropbox Mockup</a></div>
-      <div class="box3"><img src="bon-appetit.png" alt=""> <a href="#">Bon Appetit</a></div>
-      <div class="box4"><img src="claire.png" alt=""><a href="#">Bim Claire</a></div>
-      <div class="box5"><img src="portfolio.png" alt=""><a href="index.html">My Portfolio</a></div>
+      <div class="box1 tile"><img src="fb-mockup.png" alt="" width="80px"> <a href="#">Facebook Mockup</a></div>
+      <div class="box2 tile"><img src="dropbox.png" alt=""> <a href="#">Dropbox Mockup</a></div>
+      <div class="box3 tile"><img src="bon-appetit.png" alt=""> <a href="#">Bon Appetit</a></div>
+      <div class="box4 tile"><img src="claire.png" alt=""><a href="#">Bim Claire</a></div>
+      <div class="box5 tile"><img src="portfolio.png" alt=""><a href="index.html">My Portfolio</a></div>
     </div>
     <br>
     <br>
@@ -89,12 +142,11 @@
     <hr>
     <h2>Impressed?
     </h2>
+    <div class="button-section">
     <button>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span> DOWNLOAD CV
+    DOWNLOAD CV
     </button>
+  </div>
   </main>
 
   <aside>
@@ -106,17 +158,71 @@
       <input type="email" name="" id="">
       <h3>Comment</h3>
       <input type="text" name="" id="">
-      <button type="reset">Submit!</button>
+      <div class="button-section" style="width:100%;">
+        <button  type="reset" stlye="width:150px">Submit!</button>
+      </div>
+      
     </form>
-    <div>
-  
-    </div>
+   
   </aside>
   <br>
   <br>
   <hr>
-  <footer>
-      
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <!-- <IMG SRC="" ALT="" WIDTH=150 HEIGHT=100> -->
+
+      <p class="footer-links" id="contact">
+        <a href="#">Home</a> ·
+        <a href="#">About</a> ·
+        <a href="#">Pricing</a> ·
+        <a href="#">About</a> ·
+        <a href="#">Faq</a> ·
+        <a href="#">Contact</a>
+      </p>
+
+      <p class="footer-company-name">B.Darell &copy; 2022</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span></span> Lagos, Nigeria</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+2348103485310</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">aminuadebimpe@gmail.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>Let's Connect</span> Blah Blah..Blah blah bl;ah blah
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="https://facebook.com"><i class="fa fa-facebook"></i>f</a>
+        <a href="https://twitter.com"><i class="fa fa-twitter"></i>t</a>
+        <a href="https://linkedin.com"><i class="fa fa-linkedin"></i>in</a>
+        <a href="https://github.com"><i class="fa fa-github"></i>G</a><br><br>
+        <a href="#" style="display: block;">Up</a>
+      </div>
+
+    </div>
+
   </footer>
+  </div>
 </body>
 </html>
